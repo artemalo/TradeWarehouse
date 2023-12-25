@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "N2g6Nvn3g1PB4flFsUdsyTRiW5hclK9+qiGRIQ9qC7vGf2MHnBHCRABfOxEturPKlDzMSOCaAfetxQRhHvvabg==",
+  "success": true,
+  "projectFilePath": "D:\\Student\\OOP\\5 lab\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\super\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\super\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\super\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\super\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\super\\.nuget\\packages\\ulid\\1.3.3\\ulid.1.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,26 @@
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe.config
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.pdb
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.AssemblyReference.cache
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CoreCompileInputs.cache
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.exe
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.pdb
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\System.Buffers.dll
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\System.Memory.dll
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\System.Numerics.Vectors.dll
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\bin\Debug\Ulid.dll
+D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CopyComplete
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe.config
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.pdb
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\System.Buffers.dll
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\System.Memory.dll
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\System.Numerics.Vectors.dll
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\bin\Debug\Ulid.dll
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.AssemblyReference.cache
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CoreCompileInputs.cache
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CopyComplete
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.exe
+D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.pdb
