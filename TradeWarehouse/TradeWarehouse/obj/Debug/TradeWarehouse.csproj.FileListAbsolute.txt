@@ -24,3 +24,16 @@ D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CoreCo
 D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CopyComplete
 D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.exe
 D:\LabOOP\5\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.pdb
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe.config
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.exe
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\TradeWarehouse.pdb
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\System.Buffers.dll
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\System.Memory.dll
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\System.Numerics.Vectors.dll
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\bin\Debug\Ulid.dll
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.AssemblyReference.cache
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CoreCompileInputs.cache
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.csproj.CopyComplete
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.exe
+D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\obj\Debug\TradeWarehouse.pdb

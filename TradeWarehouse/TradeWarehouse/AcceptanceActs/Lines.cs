@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TradeWarehouse.AcceptanceActs
 {
-    internal class Lines : FileWorker
+    internal class Lines : FileWorker, IComparable<Lines>
     {
         uint number;
         string nameProduct;
@@ -52,6 +52,7 @@ namespace TradeWarehouse.AcceptanceActs
             this.outputPrice = outputPrice;
             this.countProduct = countProduct;
         }
+
         public string NameProduct { get => nameProduct; set => nameProduct = value; }
         public uint Number { get => number; set => number = value; }
         public Ulid Article { get => article; }
@@ -59,6 +60,11 @@ namespace TradeWarehouse.AcceptanceActs
         public double OutputPrice { get => outputPrice; set => outputPrice = value; }
         public uint CountProduct { get => countProduct; set => countProduct = value; }
 
+        int IComparable<Lines>.CompareTo(Lines other)
+        {
+            if (other is null) throw new ArgumentException("Некорректное значение параметра");
+            return number.CompareTo(other.number);
+        }
 
         protected override bool FillFromLine(string[] parts)
         {
@@ -76,7 +82,7 @@ namespace TradeWarehouse.AcceptanceActs
             else
                 return false;
         }
-        protected override StringBuilder StringBuild()
+        public override StringBuilder StringBuild()
         {
             return new StringBuilder().Append(number).Append(" ").Append(nameProduct).Append(" ").Append(article.ToString()).Append(" ").Append(unit).Append(" ").Append(inputPrice).Append(" ").Append(outputPrice).Append(" ").Append(countProduct);
         }

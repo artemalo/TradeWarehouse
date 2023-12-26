@@ -546,20 +546,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\super\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Student\\OOP\\5 lab\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse.csproj",
+      "projectUniqueName": "D:\\GitHub\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse.csproj",
       "projectName": "TradeWarehouse",
-      "projectPath": "D:\\Student\\OOP\\5 lab\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse.csproj",
-      "packagesPath": "C:\\Users\\super\\.nuget\\packages\\",
-      "outputPath": "D:\\Student\\OOP\\5 lab\\TradeWarehouse\\TradeWarehouse\\obj\\",
+      "projectPath": "D:\\GitHub\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\TradeWarehouse\\TradeWarehouse\\TradeWarehouse\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\super\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -578,6 +578,10 @@
     "frameworks": {
       "net48": {
         "dependencies": {
+          "Ulid": {
+            "target": "Package",
+            "version": "[1.3.3, )"
+          },
           "Ulid": {
             "target": "Package",
             "version": "[1.3.3, )"

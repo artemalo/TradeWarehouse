@@ -26,7 +26,7 @@ namespace TradeWarehouse
                 };
                 AcceptanceActs.Headers.Register(header: new AcceptanceActs.Headers(supplier: "[Александр Черкесск]"), listLines: listLines);
 
-                Console.WriteLine("========");*/
+                Console.WriteLine("========");
                 List<Documents.Lines> listDocLines = new List<Documents.Lines>
                 {
                     new Documents.Lines(price: 10.1, count: 15),
@@ -34,7 +34,9 @@ namespace TradeWarehouse
                     new Documents.Lines(price: 30.3, count: 25),
                     new Documents.Lines(price: 40.4, count: 30)
                 };
-                Documents.Headers.Register(new Documents.Headers(deliverer: "[Артем Чекрекесск,Ленина,1]"), listDocLines);
+                Documents.Headers.Register(new Documents.Headers(deliverer: "[Артем Чекрекесск,Ленина,1]"), listDocLines);*/
+                AcceptanceActs.Headers.PrintHeadersLinesToFile(@"C:\Users\user\Desktop\AcceptanceActs.txt");
+                Documents.Headers.PrintHeadersLinesToFile(@"C:\Users\user\Desktop\Documents.txt");
             }
             catch (Exception ex)
             {

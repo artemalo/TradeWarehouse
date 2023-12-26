@@ -3,7 +3,7 @@ using System.Text;
 
 namespace TradeWarehouse.Documents
 {
-    internal class Lines : FileWorker
+    internal class Lines : FileWorker, IComparable<Lines>
     {
         uint number;
         Ulid article;
@@ -12,6 +12,7 @@ namespace TradeWarehouse.Documents
 
         public static ushort GetLengthArgs { get => 4; }
 
+        public Lines() { }
         public Lines(double price, uint count)
         {
             this.price = price;
@@ -22,6 +23,12 @@ namespace TradeWarehouse.Documents
         public Ulid Article { get  => article; set => article = value; }
         public double Price { get  => price; set => price = value; }
         public uint Count { get => count; set => count = value; }
+
+        int IComparable<Lines>.CompareTo(Lines other)
+        {
+            if (other is null) throw new ArgumentException("Некорректное значение параметра");
+            return number.CompareTo(other.number);
+        }
 
         protected override bool FillFromLine(string[] parts)
         {
@@ -36,7 +43,7 @@ namespace TradeWarehouse.Documents
             else
                 return false;
         }
-        protected override StringBuilder StringBuild()
+        public override StringBuilder StringBuild()
         {
             return new StringBuilder().Append(number).Append(" ").Append(article.ToString()).Append(" ").Append(price).Append(" ").Append(count);
         }

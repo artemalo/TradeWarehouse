@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using TradeWarehouse.Catalog;
 
@@ -12,7 +13,7 @@ namespace TradeWarehouse.Documents
         Deliverers deliverer;
         double amount;
 
-        public static ushort GetLengthArgs { get => 4; }
+        public static ushort GetLengthArgs { get => 5; }
 
         /// <summary> Добавление в таблицу один Заголовок и несколько записей Строк </summary>
         public static void Register(Headers header, List<Lines> listLines)
@@ -109,6 +110,33 @@ namespace TradeWarehouse.Documents
             }
         }
 
+        /// <summary>Печать Фактуры в указанный файл из баз данных Headers и Lines</summary>
+        /// <param name="path">Перезапись файла. Если файл остутсвует, он будет создан</param>
+        public static void PrintHeadersLinesToFile(string path)
+        {
+            List<Headers> fileListHeaders = new List<Headers>();
+            ReadFileToList(pDocumentsHeaders, fileListHeaders);
+            List<Lines> fileListLines = new List<Lines>();
+            ReadFileToList(pDocumentsLines, fileListLines);
+
+            fileListHeaders.Sort();
+            fileListLines.Sort();
+            using (StreamWriter fileWriter = new StreamWriter(path, false, Encoding.GetEncoding(1251)))
+                foreach (Headers header in fileListHeaders)
+                {
+                    fileWriter.WriteLine(header.StringBuild());
+                    for (int i = 0; i < fileListLines.Count; ++i)
+                        if (header.number == fileListLines[i].Number)
+                        {
+                            fileWriter.WriteLine(fileListLines[i].StringBuild().Insert(0, '\t'));
+                            if (i != fileListLines.Count - 1 && fileListLines[i].Number != fileListLines[i + 1].Number)
+                                break;
+                        }
+                    fileWriter.WriteLine();
+                }
+            Console.WriteLine("Фактура была напечатана");
+        }
+
         private static int Contains(Ulid ulid, List<Product> fileListProducts)
         {
             int foundMatch = -1;
@@ -156,7 +184,7 @@ namespace TradeWarehouse.Documents
             else
                 return false;
         }
-        protected override StringBuilder StringBuild()
+        public override StringBuilder StringBuild()
         {
             return new StringBuilder().Append(number).Append(" ").Append(date.ToShortDateString()).Append(" [").Append(deliverer.Name).Append(" ").Append(deliverer.Address).Append("] ").Append(amount);
         }

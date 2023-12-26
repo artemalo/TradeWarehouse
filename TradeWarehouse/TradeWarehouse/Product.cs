@@ -13,6 +13,11 @@ namespace TradeWarehouse
 
         public static ushort GetLengthArgs { get => 5; }
 
+        public static void Report (DateTime d1, DateTime d2)
+        {
+            //........................................
+        }
+
         public Product(string name, Ulid article, double price, uint countInventory, uint countCurrent)
         {
             this.name = name;
@@ -57,7 +62,7 @@ namespace TradeWarehouse
             else
                 return false;
         }
-        protected override StringBuilder StringBuild()
+        public override StringBuilder StringBuild()
         {
             return new StringBuilder().Append(name).Append(' ').Append(article.ToString()).Append(' ').Append(price).Append(' ').Append(countInventory).Append(' ').Append(countCurrent);
         }

@@ -29,7 +29,7 @@ namespace TradeWarehouse.Catalog
             else
                 return false;
         }
-        protected override StringBuilder StringBuild()
+        public override StringBuilder StringBuild()
         {
             return new StringBuilder().Append(name).Append(" ").Append(address);
         }

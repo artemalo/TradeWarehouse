@@ -10,16 +10,16 @@ namespace TradeWarehouse
     public abstract class FileWorker
     {
         #region Paths
-        public static readonly string pProduct = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\Products.txt";
+        public static readonly string pProduct = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Products.txt";
 
-        public static readonly string pAcceptanceActsHeaders = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\AcceptanceActs\Headers.txt";
-        public static readonly string pAcceptanceActsLines = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\AcceptanceActs\Lines.txt";
+        public static readonly string pAcceptanceActsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\AcceptanceActs\Headers.txt";
+        public static readonly string pAcceptanceActsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\AcceptanceActs\Lines.txt";
 
-        public static readonly string pDocumentsHeaders = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\Documents\Headers.txt";
-        public static readonly string pDocumentsLines = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\Documents\Lines.txt";
+        public static readonly string pDocumentsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Headers.txt";
+        public static readonly string pDocumentsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Lines.txt";
 
-        public static readonly string pCatalogSupplier = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
-        public static readonly string pCatalogDelivery = @"D:\Student\OOP\5 lab\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
+        public static readonly string pCatalogSupplier = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
+        public static readonly string pCatalogDelivery = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
         #endregion
 
         /// <summary>Записывает все корректные строки(объекты) из файла в спикок.</summary>
@@ -102,6 +102,6 @@ namespace TradeWarehouse
         }
 
         protected abstract bool FillFromLine(string[] parts);
-        protected abstract StringBuilder StringBuild();
+        public abstract StringBuilder StringBuild();
     }
 }
