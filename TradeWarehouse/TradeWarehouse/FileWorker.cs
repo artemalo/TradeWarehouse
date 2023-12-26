@@ -18,8 +18,8 @@ namespace TradeWarehouse
         public static readonly string pDocumentsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Headers.txt";
         public static readonly string pDocumentsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Lines.txt";
 
-        public static readonly string pCatalogSupplier = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
-        public static readonly string pCatalogDelivery = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
+        public static readonly string pCatalogSuppliers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
+        public static readonly string pCatalogDeliverers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
         #endregion
 
         /// <summary>Записывает все корректные строки(объекты) из файла в спикок.</summary>

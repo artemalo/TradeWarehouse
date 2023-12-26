@@ -30,7 +30,7 @@ namespace TradeWarehouse.Documents
 
             #region Deliverers - from fileListDeliverers, else add header.deliverer in this list
             List<Deliverers> fileListDeliverers = new List<Deliverers>();
-            ReadFileToList(pCatalogDelivery, fileListDeliverers);
+            ReadFileToList(pCatalogDeliverers, fileListDeliverers);
             bool foundMatch = false;
             foreach (Deliverers deliverer in fileListDeliverers)
                 if (deliverer.Name == header.deliverer.Name && deliverer.Address == header.deliverer.Address)
@@ -39,7 +39,7 @@ namespace TradeWarehouse.Documents
                     break;
                 }
             if (!foundMatch)
-                WriteObjectToFile(pCatalogDelivery, true, header.deliverer);
+                WriteObjectToFile(pCatalogDeliverers, true, header.deliverer);
             #endregion
 
             List<Product> fileListProducts = new List<Product>();

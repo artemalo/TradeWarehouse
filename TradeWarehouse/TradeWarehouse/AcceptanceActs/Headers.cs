@@ -33,7 +33,7 @@ namespace TradeWarehouse.AcceptanceActs
 
             #region Supplier - from fileListSuppliers, else add header.supplier in this list
             List<Suppliers> fileListSuppliers = new List<Suppliers>();
-            ReadFileToList(pCatalogSupplier, fileListSuppliers);
+            ReadFileToList(pCatalogSuppliers, fileListSuppliers);
             bool foundMatch = false;
             foreach (var item in fileListSuppliers)
                 if (item.Name == header.supplier.Name && item.Address == header.supplier.Address)
@@ -41,7 +41,7 @@ namespace TradeWarehouse.AcceptanceActs
                     foundMatch = true;
                     break;
                 }
-            if (!foundMatch) WriteObjectToFile(pCatalogSupplier, true, header.supplier);
+            if (!foundMatch) WriteObjectToFile(pCatalogSuppliers, true, header.supplier);
             #endregion
 
             //Для каждого элемента в списке присваивает его номер
