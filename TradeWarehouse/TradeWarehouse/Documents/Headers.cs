@@ -56,14 +56,17 @@ namespace TradeWarehouse.Documents
 
 
             //По каждой записи фактуры корректируется текущее количество в "Карточке"
+            foundMatch = false;
             foreach (Lines lines in listLines)
-                foreach (Product product in fileListProducts)
-                    if (lines.Article == product.Article)
+                for (int i = 0; i < fileListProducts.Count; ++i)
+                    if (lines.Article == fileListProducts[i].Article)
                     {
-                        product.CountCurrent -= lines.Count;
+                        fileListProducts[i].CountCurrent -= lines.Count;
+                        foundMatch = true;
                         break;
                     }
-            WriteListToFile(pProduct, false, fileListProducts);
+            if (foundMatch)
+                WriteListToFile(pProduct, false, fileListProducts);
 
             WriteObjectToFile(pDocumentsHeaders, true, header);
             WriteListToFile(pDocumentsLines, true, listLines);
@@ -83,10 +86,10 @@ namespace TradeWarehouse.Documents
             }
 
             Console.WriteLine("(Значение не должно превышать текущее количество товара с отпускаемым количеством)");
-            int c = 0;//Кол-во удаленных элементов списка listLines
+            int countDeleted = 0;
             for (int i = 0; i < listCount; ++i)
             {
-                Console.Write($"Отпускаемое количество = {listLines[i - c].Count.ToString()}, Артикул: ");
+                Console.Write($"Отпускаемое количество = {listLines[i - countDeleted].Count.ToString()}, Артикул: ");
                 string articule = Console.ReadLine();
                 Ulid ulid;
                 int countCurrentProduct = -1;
@@ -96,15 +99,15 @@ namespace TradeWarehouse.Documents
                     Console.Write("Не верный формат или уже есть в списке продуктов, попробуйте снова: ");
                     articule = Console.ReadLine();
                 }
-                if (listLines[i - c].Count <= countCurrentProduct)
+                if (listLines[i - countDeleted].Count <= countCurrentProduct)
                 {
-                    listLines[i - c].Article = ulid;
+                    listLines[i - countDeleted].Article = ulid;
                     Console.WriteLine($"\t{(i + 1).ToString()} : {articule} добавлен");
                 }
                 else
                 {
-                    listLines.RemoveAt(i - c);
-                    ++c;
+                    listLines.RemoveAt(i - countDeleted);
+                    ++countDeleted;
                     Console.WriteLine($"\t{(i + 1).ToString()} : {articule} не добавлен");
                 }
             }
@@ -139,16 +142,11 @@ namespace TradeWarehouse.Documents
 
         private static int Contains(Ulid ulid, List<Product> fileListProducts)
         {
-            int foundMatch = -1;
             foreach (var product in fileListProducts)
-            {
                 if (product.Article == ulid)
-                {
-                    foundMatch = (int)product.CountCurrent;
-                    break;
-                }
-            }
-            return foundMatch;
+                    return (int)product.CountCurrent;
+
+            return -1;
         }
         public Headers(string deliverer)
         {

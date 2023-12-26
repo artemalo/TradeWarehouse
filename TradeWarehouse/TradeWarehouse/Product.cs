@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace TradeWarehouse
@@ -13,9 +14,39 @@ namespace TradeWarehouse
 
         public static ushort GetLengthArgs { get => 5; }
 
-        public static void Report (DateTime d1, DateTime d2)
+        /// <summary>Товарный отчет вывод в консоле</summary>
+        /// <param name="d1">Начало периода</param>
+        /// <param name="d2">Конец периода</param>
+        public static void Report(DateTime d1, DateTime d2)
         {
-            //........................................
+            //1 Сумма на начало периода("Заработанная сумма", По всем товарам +=цену*(кол-во - текущее кол-во))
+            List<AcceptanceActs.Headers> fileListActsHeaders = new List<AcceptanceActs.Headers>();
+            ReadFileToList(pAcceptanceActsHeaders, fileListActsHeaders);
+            List<AcceptanceActs.Lines> fileListActsLines = new List<AcceptanceActs.Lines>();
+            List<Product> fileListProducts = new List<Product>();
+            ReadFileToList(pProduct, fileListProducts);
+
+            double summ = 0;
+            foreach (AcceptanceActs.Headers header in fileListActsHeaders)
+            {
+                if (header.Date < d1)
+                    foreach (AcceptanceActs.Lines line in fileListActsLines)
+                        if (header.Number == line.Number)
+                            foreach (Product product in fileListProducts)
+                                if (line.Article == product.Article)
+                                    summ += product.Price * (product.CountInventory - product.CountCurrent);
+            }
+
+            //2
+        }
+
+        /// <summary>Товарный отчет вывод в файл</summary>
+        /// <param name="d1">Начало периода</param>
+        /// <param name="d2">Конец периода</param>
+        public static void Report(string path, DateTime d1, DateTime d2)
+        {
+            //1
+
         }
 
         public Product(string name, Ulid article, double price, uint countInventory, uint countCurrent)

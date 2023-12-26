@@ -10,16 +10,16 @@ namespace TradeWarehouse
     public abstract class FileWorker
     {
         #region Paths
-        public static readonly string pProduct = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Products.txt";
+        public static readonly string pProduct = @"D:\GitHub\TradeWarehouse\TradeWarehouse\Products.txt";
 
-        public static readonly string pAcceptanceActsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\AcceptanceActs\Headers.txt";
-        public static readonly string pAcceptanceActsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\AcceptanceActs\Lines.txt";
+        public static readonly string pAcceptanceActsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\AcceptanceActs\Headers.txt";
+        public static readonly string pAcceptanceActsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\AcceptanceActs\Lines.txt";
 
-        public static readonly string pDocumentsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Headers.txt";
-        public static readonly string pDocumentsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Documents\Lines.txt";
+        public static readonly string pDocumentsHeaders = @"D:\GitHub\TradeWarehouse\TradeWarehouse\Documents\Headers.txt";
+        public static readonly string pDocumentsLines = @"D:\GitHub\TradeWarehouse\TradeWarehouse\Documents\Lines.txt";
 
-        public static readonly string pCatalogSuppliers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
-        public static readonly string pCatalogDeliverers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
+        public static readonly string pCatalogSuppliers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\Catalog\Suppliers.txt";
+        public static readonly string pCatalogDeliverers = @"D:\GitHub\TradeWarehouse\TradeWarehouse\Catalog\Deliverers.txt";
         #endregion
 
         /// <summary>Записывает все корректные строки(объекты) из файла в спикок.</summary>

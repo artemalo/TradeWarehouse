@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Xml.Linq;
 using TradeWarehouse.Catalog;
-using TradeWarehouse.Documents;
 
 namespace TradeWarehouse.AcceptanceActs
 {
@@ -70,7 +68,7 @@ namespace TradeWarehouse.AcceptanceActs
                     {
                         if (fileListProducts[j].Price == item.OutputPrice)
                         {
-                            fileListProducts[j].CountCurrent = item.CountProduct;
+                            fileListProducts[j].CountCurrent += item.CountProduct;
                             foundMatch = true;
                         }
                         index = j;
@@ -120,6 +118,9 @@ namespace TradeWarehouse.AcceptanceActs
                 }
             Console.WriteLine("Приемный акт был напечатан");
         }
+
+        public uint Number { get => number; private set => number = value; }
+        public DateTime Date {  get; private set; }
 
         public Headers(string supplier)
         {

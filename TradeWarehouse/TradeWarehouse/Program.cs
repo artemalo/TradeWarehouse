@@ -35,8 +35,8 @@ namespace TradeWarehouse
                     new Documents.Lines(price: 40.4, count: 30)
                 };
                 Documents.Headers.Register(new Documents.Headers(deliverer: "[Артем Чекрекесск,Ленина,1]"), listDocLines);*/
-                AcceptanceActs.Headers.PrintHeadersLinesToFile(@"C:\Users\user\Desktop\AcceptanceActs.txt");
-                Documents.Headers.PrintHeadersLinesToFile(@"C:\Users\user\Desktop\Documents.txt");
+                AcceptanceActs.Headers.PrintHeadersLinesToFile(@"C:\Users\sant6\Desktop\AcceptanceActs.txt");
+                Documents.Headers.PrintHeadersLinesToFile(@"C:\Users\sant6\Desktop\Documents.txt");
             }
             catch (Exception ex)
             {
