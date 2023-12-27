@@ -148,6 +148,7 @@ namespace TradeWarehouse.Documents
 
             return -1;
         }
+
         public Headers(string deliverer)
         {
             string[] parts = deliverer.Replace("[", string.Empty).Replace("]", string.Empty).Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
@@ -161,6 +162,9 @@ namespace TradeWarehouse.Documents
         {
             Console.WriteLine("~ Documents.Headers: " + number.ToString());
         }
+
+        public DateTime Date { get => date; }
+        public uint Number { get => number; }
 
         int IComparable<Headers>.CompareTo(Headers other)
         {

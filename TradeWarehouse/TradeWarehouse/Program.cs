@@ -16,10 +16,7 @@ namespace TradeWarehouse
 
                 Console.WriteLine("List<Product> = " + listProduct.Count.ToString());
 
-                Console.WriteLine("========");
-
-
-                /*List<AcceptanceActs.Lines> listLines = new List<AcceptanceActs.Lines>
+                List<AcceptanceActs.Lines> listLines = new List<AcceptanceActs.Lines>
                 {
                     new AcceptanceActs.Lines("Товар3", Ulid.Parse("01HJ4FEMAMEVXXC0GAWXSKJA5J"), "шт", 9.5, 24.1, 100),
                     new AcceptanceActs.Lines("Товар4", Ulid.Parse("01HJ4FEMAMC9P4SPWKAYP2ZR4N"), "шт", 90.49, 100.59, 1902)
@@ -34,9 +31,12 @@ namespace TradeWarehouse
                     new Documents.Lines(price: 30.3, count: 25),
                     new Documents.Lines(price: 40.4, count: 30)
                 };
-                Documents.Headers.Register(new Documents.Headers(deliverer: "[Артем Чекрекесск,Ленина,1]"), listDocLines);*/
+                Documents.Headers.Register(new Documents.Headers(deliverer: "[Артем Чекрекесск,Ленина,1]"), listDocLines);
+
                 AcceptanceActs.Headers.PrintHeadersLinesToFile(@"C:\Users\sant6\Desktop\AcceptanceActs.txt");
                 Documents.Headers.PrintHeadersLinesToFile(@"C:\Users\sant6\Desktop\Documents.txt");
+
+                Product.Report(@"C:\Users\sant6\Desktop\Report.txt", new DateTime(2023, 12, 19), new DateTime(2023, 12, 23));
             }
             catch (Exception ex)
             {

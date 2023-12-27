@@ -13,7 +13,7 @@ namespace TradeWarehouse.AcceptanceActs
         Suppliers supplier;
         double totalInputAmount;
         double totalOutputAmount;
-
+        //public DateTime Date { get => date; }
         public static ushort GetLengthArgs { get => 6; }
 
         /// <summary>Добавление в таблицу один Заголовок и несколько записей Строк</summary>
@@ -120,7 +120,7 @@ namespace TradeWarehouse.AcceptanceActs
         }
 
         public uint Number { get => number; private set => number = value; }
-        public DateTime Date {  get; private set; }
+        public DateTime Date {  get => date; private set => date = value; }
 
         public Headers(string supplier)
         {
