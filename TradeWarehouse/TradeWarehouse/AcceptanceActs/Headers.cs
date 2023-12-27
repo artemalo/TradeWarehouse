@@ -75,7 +75,12 @@ namespace TradeWarehouse.AcceptanceActs
                     }
                 Product itemProduct = new Product(item.NameProduct, item.Article, item.OutputPrice, item.CountProduct, item.CountProduct);
                 if (!foundMatch && index != -1)
+                {
+                    uint countInventory = fileListProducts[index].CountInventory;
+                    itemProduct.CountCurrent += fileListProducts[index].CountCurrent;
                     fileListProducts[index] = itemProduct;
+                    fileListProducts[index].CountInventory = countInventory;
+                }
                 else
                     if (!foundMatch && index == -1)
                     fileListProducts.Add(itemProduct);
@@ -131,10 +136,6 @@ namespace TradeWarehouse.AcceptanceActs
                 throw new Exception("Некорректное создание объекта. Возможно аргументов должно быть " + GetLengthArgs.ToString());
         }
         public Headers() {}
-        ~Headers()
-        {
-            Console.WriteLine("~ AcceptanceActs.Headers: "+number.ToString());
-        }
 
         int IComparable<Headers>.CompareTo(Headers other)
         {

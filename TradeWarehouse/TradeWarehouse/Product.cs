@@ -105,10 +105,6 @@ namespace TradeWarehouse
             countInventory = 0;
             countCurrent = 0;
         }
-        ~Product()
-        {
-            Console.WriteLine($"~ Product: {name}");
-        }
         public string Name { get => name; set => name = value; }
         public Ulid Article { get => article; set { article = value == null ? Ulid.NewUlid() : value; } }
         public double Price { get => price; set => price = value; }

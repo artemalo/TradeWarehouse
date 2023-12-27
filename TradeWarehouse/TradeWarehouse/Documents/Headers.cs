@@ -158,10 +158,6 @@ namespace TradeWarehouse.Documents
                 throw new Exception("Некорректное создание объекта. Возможно аргументов должно быть " + GetLengthArgs.ToString());
         }
         public Headers() { }
-        ~Headers()
-        {
-            Console.WriteLine("~ Documents.Headers: " + number.ToString());
-        }
 
         public DateTime Date { get => date; }
         public uint Number { get => number; }
